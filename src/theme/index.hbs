@@ -34,9 +34,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Fira+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto.css:400,500,600">
-
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,600">
 
     <!-- Highlight.js Stylesheets -->
     <link rel="stylesheet" href="{{ path_to_root }}highlight.css">
@@ -46,7 +44,7 @@
 <body>
     <header id="appNavigationBar" class="app-navigation-bar">
         <a href="/" class="brand">
-            Nightly
+            Nightly Wiki
         </a>
         <div class="navigation-items">
             <a href="/guides">Guides</a>
@@ -60,8 +58,22 @@
         </div>
     </header>
 
-    <main id="content" class="container">
-        {{{ content }}}
-    </main>
+
+    <div class="page-wrapper">
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="{{ path_to_root }}toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <main id="content">
+            {{{ content }}}
+        </main>
+    </div>
 </body>
 </html>

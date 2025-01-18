@@ -1,4 +1,5 @@
 # Summary
 
-- [Home](./FOREWORD.html)
-- [Chapter 1](./guides/chapter_1.md)
+[Home](FOREWORD.html)
+- [Getting Started](guide/getting-started.md)
+- [Installation](guide/install.md)

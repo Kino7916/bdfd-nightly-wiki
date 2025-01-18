@@ -61,11 +61,12 @@ button {
     background-color: var(--color-background-appNavigation);
     font-family: var(--inter-font);
 
-    z-index: 99999999;
+    z-index: var(--z-appNavigation);
     position: fixed;
     top: 0;
 
     .brand {
+        z-index: var(--z-brandNavigation);
         background: -webkit-linear-gradient(#eee, #333);
         background-clip: text;
         -webkit-background-clip: text;
@@ -108,4 +109,39 @@ button.secondary {
     color: var(--color-button);
     background-color: transparent;
     border: solid 1px var(--color-button);
+}
+
+/* Page Wrapper */
+.page-wrapper {
+    display: flex;
+    flex-direction: row;
+    min-height: 100svh;
+    max-height: 100vw;
+}
+
+#content {
+    padding: 3rem 1rem;
+    width: 100%;
+}
+
+/* Sidebar Navigation */
+#sidebar {
+    width: var(--sidebar-width);
+    padding-top: 3rem;
+    border-right: solid 2px hsla(0, 0%, 0%, 0.5);
+
+    /* Remove Home from sidebar */
+    .chapter-item:nth-child(1) {
+        display: none;
+    }
+    
+    /* Disable markers */
+    .chapter-item::marker,
+    .part-title::marker {
+        content: '';
+    }
+
+    strong {
+        display: none;
+    }
 }
