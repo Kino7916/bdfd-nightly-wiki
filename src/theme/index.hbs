@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="{{ language }}" class="{{ default_theme }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+
+    {{> head}}
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="{{ description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#633fb3">
+    <meta name="og:image" content="https://app.botdesignerdiscord.com/icons/Icon-512.png">
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="icon" href="{{ path_to_root }}/theme/assets/favicon/favicon.png">
+    <link rel="apple-touch-icon" href="{{ path_to_root }}/theme/assets/favicon/favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.css">
+    <link rel="stylesheet" href="{{ path_to_root }}theme/css/variables.css">
+    <link rel="stylesheet" href="{{ path_to_root }}theme/css/general.css">
+    <link rel="stylesheet" href="{{ path_to_root }}theme/css/chrome.css">
+    <link rel="stylesheet" href="{{ path_to_root }}theme/css/print.css" media="print">
+
+    
+    <!-- Discord Components -->
+    <script type="module" src="https://unpkg.com/@skyra/discord-components-core"></script>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="{{ path_to_root }}FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Fira+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto.css:400,500,600">
+
+    
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="{{ path_to_root }}highlight.css">
+    <link rel="stylesheet" href="{{ path_to_root }}tomorrow-night.css">
+    <link rel="stylesheet" href="{{ path_to_root }}ayu-highlight.css">
+</head>
+<body>
+    <header id="appNavigationBar" class="app-navigation-bar">
+        <a href="/" class="brand">
+            Nightly
+        </a>
+        <div class="navigation-items">
+            <a href="/guides">Guides</a>
+            <a href="/docs">Documentation</a>
+            <a href="/references">References</a>
+        </div>
+        <div class="page-configuration">
+            <a class="static" href="">
+                <i class="fa fa-brands fa-github"></i>
+            </a>
+        </div>
+    </header>
+
+    <main id="content" class="container">
+        {{{ content }}}
+    </main>
+</body>
+</html>

@@ -1,0 +1,30 @@
+[book]
+title = "Bot Designer For Discord - Wiki"
+authors = ["NilPointer Software"]
+description = "The official documentation of BDFD. It covers guides, examples related to BDScript, BDJS and as well features too."
+multilingual = false
+language = "en"
+src = "src"
+
+[preprocessor]
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
+
+[build]
+create-missing = false
+
+[output]
+
+[output.html]
+theme = "src/theme"
+default-theme = "nightly"
+preferred-dark-theme = "nightly"
+smart-punctuation = true
+git-repository-url = "https://github.com/NilPointer-Software/bdfd-wiki"
+edit-url-template = "https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/{path}"
+no-section-label = false
+input-404 = "NOTFOUND.html"
+site-url = "/"
+additional-css = ["./src/theme/mdbook-admonish.css"]
